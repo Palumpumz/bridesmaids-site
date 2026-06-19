@@ -32,6 +32,15 @@ nameButton.addEventListener("click", () => {
     
     userName = name;
 
+    //Change "Sarah" to be your Maid of Honor name
+    if (name.toLowerCase() === "Sarah" || name.toLowerCase() === "Sarah Jane") {
+        title.textContent = `Will you be my Maid of Honor, ${userName}?`;
+    }
+    else {
+        title.textContent = `Will you be my Bridesmaid, ${userName}?`;
+    }
+
+
     title.textContent = `Will you be my Bridesmaid, ${userName}?`;
     popup.style.display = "none";
     envelope.style.display = "none";
@@ -106,6 +115,10 @@ noBtn.addEventListener("click", () => {
 yesBtn.addEventListener("click", () => {
     title.textContent = "Yippeeee!";
     catImg.src = "happy.gif";
+    // Check if the user is the Maid of Honor
+    if (userName.toLowerCase() === "Sarah" || userName.toLowerCase() === "Sarah Jane") {
+        finalText.textContent = "Can't wait to have you as my Maid of Honor!";
+    }
     document.querySelector(".letter-window").classList.add("final");
     buttons.style.display = "none";
     finalText.style.display = "block";
