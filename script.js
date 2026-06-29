@@ -55,6 +55,7 @@ nameButton.addEventListener("click", () => {
 async function sendResult(answer) {
 
     const data = {
+        // put your acceess key from web3form
         access_key: "access_key_value",
         name: userName,
         result: answer,
